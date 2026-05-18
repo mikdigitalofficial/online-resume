@@ -261,6 +261,10 @@ margin-top:55px;
 }
 
 .metric{
+min-height:240px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 background:rgba(255,255,255,0.03);
 padding:28px;
 border-radius:24px;
@@ -268,12 +272,14 @@ border:1px solid rgba(255,255,255,0.06);
 }
 
 .metric h2{
-font-size:42px;
-font-weight:800;
-margin-bottom:12px;
+font-size:58px;
+line-height:1;
+font-weight:900;
+margin-bottom:18px;
 background:linear-gradient(90deg,#8b5cf6,#6366f1);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
+word-break:break-word;
 }
 
 .metric p{
@@ -549,7 +555,19 @@ font-size:36px;
 .contact-box h2{
 font-size:34px;
 }
+.proof-card{
+min-width:88%;
+max-width:88%;
+}
 
+.metric h2{
+font-size:42px;
+}
+
+.metric{
+min-height:auto;
+}
+  
 }
 
 </style>
@@ -872,11 +890,26 @@ Campaign & Dashboard Proof
 Campaign dashboards, Meta Ads Manager screenshots, Google Ads reports, SEO rankings, and execution samples.
 </p>
 
-<div class="gallery">
+<div class="gallery-wrapper">
+
+<div class="gallery-nav">
+
+<button class="gallery-btn" onclick="scrollGallery(-1)">
+<i class="fa-solid fa-arrow-left"></i>
+</button>
+
+<button class="gallery-btn" onclick="scrollGallery(1)">
+<i class="fa-solid fa-arrow-right"></i>
+</button>
+
+</div>
+
+<div class="gallery" id="proofGallery">
 
 <div class="proof-card"><img src="images/metacampaigns-1.png"></div>
 <div class="proof-card"><img src="images/metacampaigns-4.png"></div>
 <div class="proof-card"><img src="images/metacampaigns-5.png"></div>
+
 <div class="proof-card"><img src="images/metaadobjective.png"></div>
 <div class="proof-card"><img src="images/metaadsdetailtargeting.png"></div>
 <div class="proof-card"><img src="images/metaad-0.png"></div>
@@ -905,6 +938,8 @@ Campaign dashboards, Meta Ads Manager screenshots, Google Ads reports, SEO ranki
 <div class="proof-card"><img src="images/cert-2.png"></div>
 <div class="proof-card"><img src="images/cert-4.png"></div>
 <div class="proof-card"><img src="images/cert-5.png"></div>
+
+</div>
 
 </div>
 
@@ -1030,7 +1065,22 @@ stagger:0.1
 });
 
 </script>
+<script>
 
+function scrollGallery(direction){
+
+const gallery = document.getElementById('proofGallery');
+
+const scrollAmount = 460;
+
+gallery.scrollBy({
+left: direction * scrollAmount,
+behavior:'smooth'
+});
+
+}
+
+</script>
 </body>
 
 </html>
