@@ -413,24 +413,48 @@ background:linear-gradient(90deg,#8b5cf6,#6366f1);
 -webkit-text-fill-color:transparent;
 }
 
+.gallery-wrapper{
+position:relative;
+margin-top:50px;
+overflow:hidden;
+}
+
 .gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+display:flex;
 gap:24px;
+overflow-x:auto;
+scroll-behavior:smooth;
+padding-bottom:20px;
+
+scrollbar-width:none;
+-ms-overflow-style:none;
+}
+
+.gallery::-webkit-scrollbar{
+display:none;
 }
 
 .proof-card{
+min-width:420px;
+max-width:420px;
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(255,255,255,0.06);
 padding:14px;
+border-radius:26px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+overflow:hidden;
+position:relative;
 }
-
 .proof-card img{
-border-radius:16px;
-height:300px;
 width:100%;
-object-fit:cover;
+height:auto;
+max-height:700px;
+object-fit:contain;
+border-radius:18px;
+background:#111;
 transition:0.5s;
 }
-
 .proof-card:hover img{
 transform:scale(1.03);
 }
