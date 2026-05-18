@@ -1,7 +1,20 @@
+# Final Portfolio Website — Master Code
+
+Replace your ENTIRE `index.html` with this code.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<meta name="description" content="Performance-driven Digital Marketing Specialist in Dubai specializing in Meta Ads, Google Ads, SEO, CRM automation, and lead generation campaigns.">
+<meta name="keywords" content="Dubai Digital Marketer, Meta Ads Expert Dubai, Google Ads Specialist UAE, SEO Expert Dubai, Performance Marketing UAE">
+<meta name="author" content="Mohamed Ibrahim Khan">
+<meta property="og:title" content="Mohamed Ibrahim Khan | Performance Marketer">
+<meta property="og:description" content="Portfolio showcasing Meta Ads, Google Ads, SEO, and lead generation campaign results across UAE and Australia.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" type="image/png" href="images/metaad-1.png">
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +59,59 @@ margin:auto;
 
 section{
 padding:100px 0;
+}
+
+.navbar{
+position:sticky;
+top:0;
+width:100%;
+backdrop-filter:blur(14px);
+background:rgba(10,10,10,0.75);
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:white;
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:#d1d1d1;
+text-decoration:none;
+font-size:15px;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#7c3aed;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:white;
+padding:14px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+z-index:999;
+box-shadow:0 10px 30px rgba(37,211,102,0.4);
 }
 
 .hero{
@@ -132,6 +198,16 @@ margin-top:70px;
 }
 
 .metric{
+transition:0.35s ease;
+}
+
+.metric:hover{
+transform:translateY(-8px);
+border:1px solid rgba(124,58,237,0.35);
+box-shadow:0 20px 45px rgba(124,58,237,0.15);
+}
+
+.metric{
 background:rgba(255,255,255,0.03);
 backdrop-filter:blur(10px);
 padding:28px;
@@ -148,6 +224,23 @@ margin-bottom:10px;
 color:#999;
 font-size:15px;
 line-height:1.6;
+}
+
+.section-title{
+position:relative;
+display:inline-block;
+padding-bottom:16px;
+}
+
+.section-title::after{
+content:'';
+position:absolute;
+left:0;
+bottom:0;
+width:90px;
+height:4px;
+border-radius:50px;
+background:linear-gradient(90deg,#7c3aed,#4f46e5);
 }
 
 .section-title{
@@ -172,6 +265,24 @@ margin-bottom:40px;
 }
 
 .case-image{
+transition:0.35s ease;
+overflow:hidden;
+}
+
+.case-image:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(124,58,237,0.12);
+}
+
+.case-image img{
+transition:0.4s ease;
+}
+
+.case-image:hover img{
+transform:scale(1.03);
+}
+
+.case-image{
 background:rgba(255,255,255,0.03);
 backdrop-filter:blur(10px);
 padding:20px;
@@ -183,6 +294,16 @@ border:1px solid rgba(255,255,255,.05);
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+}
+
+.result-card{
+transition:0.35s ease;
+}
+
+.result-card:hover{
+transform:translateY(-8px);
+border:1px solid rgba(124,58,237,0.35);
+box-shadow:0 20px 45px rgba(124,58,237,0.15);
 }
 
 .result-card{
@@ -217,6 +338,16 @@ object-fit:cover;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:20px;
+}
+
+.skill{
+transition:0.3s ease;
+}
+
+.skill:hover{
+transform:translateY(-5px);
+background:rgba(124,58,237,0.12);
+border-color:rgba(124,58,237,0.3);
 }
 
 .skill{
@@ -257,6 +388,17 @@ color:#666;
 }
 
 @media(max-width:991px){
+
+.nav-container{
+flex-direction:column;
+gap:15px;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+}
+
 
 .hero{
 padding:100px 0;
@@ -301,6 +443,19 @@ height:auto;
 </head>
 
 <body>
+
+<nav class="navbar">
+<div class="container nav-container">
+<div class="logo">mikdigital</div>
+<div class="nav-links">
+<a href="#case-studies">Case Studies</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<a href="https://wa.me/971506102836" class="whatsapp-float" target="_blank">WhatsApp</a>
 
 <section class="hero">
 
@@ -615,9 +770,31 @@ LinkedIn
 
 </section>
 
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+const target = document.querySelector(this.getAttribute('href'));
+if(target){
+e.preventDefault();
+target.scrollIntoView({ behavior: 'smooth' });
+}
+});
+});
+</script>
+
 <footer>
 Mohamed Ibrahim Khan — Performance Marketing Portfolio
 </footer>
 
 </body>
 </html>
+```
+
+Then:
+
+1. Save file
+2. Put all images inside `images` folder
+3. Put `resume.pdf` beside `index.html`
+4. Open `index.html` in browser
+5. Deploy to Netlify or Vercel
+
