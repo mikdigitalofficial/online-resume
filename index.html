@@ -611,10 +611,14 @@ mikdigital
 
 </nav>
 
-<a href="https://wa.me/971506102836" target="_blank" class="whatsapp">
-<i class="fa-brands fa-whatsapp"></i>
-WhatsApp
-</a>
+<a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  onclick="
+    dataLayer.push({ event: 'whatsapp_click' });
+    fbq('track', 'Contact');
+  "
+>
 
 <section class="hero">
 
@@ -655,21 +659,61 @@ Focused on Meta Ads, Google Ads, SEO, CRM automation, and scalable lead generati
 </div>
 
 <div class="hero-buttons">
+<div class="hero-buttons">
 
-<a href="mohamed_ibrahim-khan cv.pdf" class="btn primary" target="_blank">
-<i class="fa-solid fa-file-arrow-down"></i>
-Download Resume
+<a
+  href="mohamed_ibrahim-khan cv.pdf"
+  class="btn primary"
+  target="_blank"
+  onclick="
+    dataLayer.push({ event: 'resume_view' });
+    fbq('track', 'ViewContent');
+  "
+>
+  <i class="fa-solid fa-file-arrow-down"></i>
+  View Resume
 </a>
 
-<a href="mailto:kimofficialmik@gmail.com" class="btn secondary">
-<i class="fa-solid fa-envelope"></i>
-Contact Me
+<a
+  href="mailto:kimofficialmik@gmail.com"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'email_click' });
+    fbq('track', 'Contact');
+  "
+>
+  <i class="fa-solid fa-envelope"></i>
+  Contact Me
 </a>
 
-<a href="https://www.linkedin.com/in/mikdxb" target="_blank" class="btn secondary">
-<i class="fa-brands fa-linkedin"></i>
-LinkedIn
+<a
+  href="https://www.linkedin.com/in/mikdxb"
+  target="_blank"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'linkedin_view' });
+    fbq('track', 'ViewContent');
+  "
+>
+  <i class="fa-brands fa-linkedin"></i>
+  LinkedIn
 </a>
+
+<a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'whatsapp_click' });
+    fbq('track', 'Contact');
+  "
+>
+  <i class="fa-brands fa-whatsapp"></i>
+  WhatsApp
+</a>
+
+</div>
+
 
 </div>
 
@@ -1049,6 +1093,8 @@ LinkedIn
 
 </div>
 
+</div>
+
 </section>
 
 <footer>
@@ -1135,6 +1181,7 @@ behavior:'smooth'
   />
 </noscript>
 <!-- End Meta Pixel -->
+  
 </body>
 
 </html>
