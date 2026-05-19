@@ -611,15 +611,6 @@ mikdigital
 
 </nav>
 
-<a
-  href="https://wa.me/971506102836"
-  target="_blank"
-  onclick="
-    dataLayer.push({ event: 'whatsapp_click' });
-    fbq('track', 'Contact');
-  "
->
-
 <section class="hero">
 
 <div class="container">
@@ -658,7 +649,6 @@ Focused on Meta Ads, Google Ads, SEO, CRM automation, and scalable lead generati
 
 </div>
 
-<div class="hero-buttons">
 <div class="hero-buttons">
 
 <a
@@ -1072,19 +1062,55 @@ Available for Performance Marketing and Lead Generation opportunities across UAE
 
 <div class="hero-buttons" style="justify-content:center;">
 
-<a href="mohamed_ibrahim-khan cv.pdf" class="btn primary" target="_blank">
-<i class="fa-solid fa-file-arrow-down"></i>
-Download CV
+<a
+  href="mohamed_ibrahim-khan cv.pdf"
+  class="btn primary"
+  target="_blank"
+  onclick="
+    dataLayer.push({ event: 'resume_download' });
+    fbq('track', 'Lead');
+  "
+>
+  <i class="fa-solid fa-file-arrow-down"></i>
+  Download CV
 </a>
 
-<a href="mailto:kimofficialmik@gmail.com" class="btn secondary">
-<i class="fa-solid fa-envelope"></i>
-Email Me
+<a
+  href="mailto:kimofficialmik@gmail.com"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'email_click' });
+    fbq('track', 'Contact');
+  "
+>
+  <i class="fa-solid fa-envelope"></i>
+  Email Me
 </a>
 
-<a href="https://www.linkedin.com/in/mikdxb" target="_blank" class="btn secondary">
-<i class="fa-brands fa-linkedin"></i>
-LinkedIn
+<a
+  href="https://www.linkedin.com/in/mikdxb"
+  target="_blank"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'linkedin_view' });
+    fbq('track', 'ViewContent');
+  "
+>
+  <i class="fa-brands fa-linkedin"></i>
+  LinkedIn
+</a>
+
+<a
+  href="https://wa.me/971506102836"
+  target="_blank"
+  class="btn secondary"
+  onclick="
+    dataLayer.push({ event: 'whatsapp_click' });
+    fbq('track', 'Contact');
+  "
+>
+  <i class="fa-brands fa-whatsapp"></i>
+  WhatsApp
 </a>
 
 </div>
